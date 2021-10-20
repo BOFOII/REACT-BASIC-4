@@ -3,13 +3,13 @@ import { Container } from 'reactstrap';
 import BackComponent from '../components/BackComponent';
 
 class EditUserContainer extends Component {
-  render() {
-    return (
-      <Container>
-        <BackComponent></BackComponent>
-      </Container>
-    )
-  }
+	render() {
+		return (
+			<Container>
+				<BackComponent />
+			</Container>
+		);
+	}
 }
 
 export default EditUserContainer;

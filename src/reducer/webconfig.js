@@ -1,9 +1,9 @@
 const initialState = {
-  title: 'ZLearns',
+	title: 'ZLearns'
 };
 
 const webconfig = (state = initialState, action) => {
-  return state;
+	return state;
 };
 
 export default webconfig;

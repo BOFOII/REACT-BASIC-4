@@ -8,25 +8,24 @@ import EditUserContainer from './pages/EditUserContainer';
 import DetailUserContainer from './pages/DetailUserContainer';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    }
-  }
-  render() {
-    return(
-      <div>
-        <Router>
-          <NavbarComponent />
-          <JumbotronComponent />
-          <Route path="/" exact component={ HomeContainer } />
-          <Route path="/create" exact component={ AddUserContainer } />
-          <Route path="/edit/:id" exact component={ EditUserContainer } />
-          <Route path="/details/:id" exact component={ DetailUserContainer }/>
-        </Router>
-      </div>
-    );
-  }
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
+	render() {
+		return (
+			<div>
+				<Router>
+					<NavbarComponent />
+					<JumbotronComponent />
+					<Route path="/" exact component={HomeContainer} />
+					<Route path="/create" exact component={AddUserContainer} />
+					<Route path="/edit/:id" exact component={EditUserContainer} />
+					<Route path="/details/:id" exact component={DetailUserContainer} />
+				</Router>
+			</div>
+		);
+	}
 }
 
 export default App;
