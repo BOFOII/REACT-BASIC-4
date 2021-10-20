@@ -10,6 +10,8 @@ import {
   NavbarText,
   Container,
 } from 'reactstrap';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 const NavbarComponent = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +27,7 @@ const NavbarComponent = (props) => {
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/components/"><Link to="/create">Create</Link></NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
@@ -39,4 +41,10 @@ const NavbarComponent = (props) => {
   );
 }
 
-export default NavbarComponent;
+const mapStateToProps = (state) => {
+  return {
+    title: state.webconfig.title,
+  }
+}
+
+export default connect(mapStateToProps, null)(NavbarComponent);
